@@ -61,9 +61,48 @@ Create credentials for the following services:
 
 Create a vector-enabled table (`user_knowledge_base`) and ensure it supports 768-dimension embeddings:
 
-Follow LangChain’s guide here:  
-👉 [Supabase Vector Store Setup (LangChain)](https://supabase.com/docs/guides/ai/langchain?queryGroups=database-method&database-method=sql)
-Note: Current setup uses 768 vector dimension. Use this for embedding use 1536 for OpenAI.
+Follow guide here:
+
+``` sql
+-- Enable the pgvector extension to work with embedding vectors
+create extension vector;
+
+-- Create a table to store your documents
+create table user_knowledge_base (
+  id bigserial primary key,
+  content text, -- corresponds to Document.pageContent
+  metadata jsonb, -- corresponds to Document.metadata
+  embedding vector(768) -- 768 works for Gemini embeddings, change if needed
+);
+
+-- Create a function to search for documents
+create function match_documents (
+  query_embedding vector(768),
+  match_count int default null,
+  filter jsonb DEFAULT '{}'
+) returns table (
+  id bigint,
+  content text,
+  metadata jsonb,
+  similarity float
+)
+language plpgsql
+as $$
+#variable_conflict use_column
+begin
+  return query
+  select
+    id,
+    content,
+    metadata,
+    1 - (user_knowledge_base.embedding <=> query_embedding) as similarity
+  from user_knowledge_base
+  where metadata @> filter
+  order by user_knowledge_base.embedding <=> query_embedding
+  limit match_count;
+end;
+$$;
+```
 ---
 
 ## 💬 How Users Interact
