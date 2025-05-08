@@ -38,19 +38,24 @@ This project empowers two core interactions:
 
 ## 🛠 Getting Started: Setup
 
-### 1. Obtain the Workflow
+You can obtain and deploy this workflow in two ways:
 
-Clone or download this repository to get the necessary files:
+1. **Directly from the n8n Template Library:**
+   Get the workflow directly from the official n8n template page:
+   
+   <https://n8n.io/workflows/3940-document-qanda-chatbot-with-gemini-ai-and-supabase-vector-search-for-telegram/>
+   
+   Clicking "Use this workflow" on that page will open it directly in your n8n instance, ready for configuration.
 
-- `telegram-pdf-ai-assistant.json`: The complete n8n workflow export.
-- `README.md`: This guide.
+3. **Importing from this Repository:**
+   Alternatively, clone or download this repository to get the necessary files:
 
-### 2. Deploy the Workflow in n8n
+   * `telegram-pdf-ai-assistant.json`: The complete n8n workflow export.
 
-- Access your local or hosted [n8n](https://n8n.io) instance.
-- Navigate to `Workflows` → `Import from File` → select `telegram-pdf-ai-assistant.json`.
+   * `README.md`: This guide.
+     Then, access your local or hosted [n8n](https://n8n.io) instance, navigate to `Workflows` → `Import from File` → select `telegram-pdf-ai-assistant.json`.
 
-### 3. Connect Your Services: Configure Credentials
+### Connect Your Services: Configure Credentials
 
 Create API credentials for the following services within your n8n instance:
 
@@ -61,7 +66,7 @@ Create API credentials for the following services within your n8n instance:
 | Supabase         | Storing & searching document vectors |
 | OpenWeatherMap   | (Optional) Fetching weather data    |
 
-### 4. Prepare Your Supabase Knowledge Base
+### Prepare Your Supabase Knowledge Base
 
 Set up a vector-enabled table in your Supabase project to store your document embeddings. Execute the following SQL commands in your Supabase SQL Editor:
 
