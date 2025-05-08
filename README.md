@@ -5,6 +5,15 @@ This project transforms a standard **Telegram bot** into your dedicated AI assis
 Simply upload any PDF document to the bot, and instantly gain the ability to chat with it, querying its contents as if it were a knowledgeable expert on your uploaded files.
 
 ---
+## 📹 Watch the Bot in Action
+
+[![𝗨𝗻𝗹𝗲𝗮𝘀𝗵𝗶𝗻𝗴 𝗔𝗜 𝗼𝗻 𝗠𝘆 𝗕𝗼𝗼𝗸𝘀𝗵𝗲𝗹𝗳: 𝗙𝗹𝗼𝘄 𝗣𝗿𝗼𝗴𝗿𝗮𝗺𝗺𝗶𝗻𝗴 𝗣𝗼𝘄𝗲𝗿𝘀 𝗮 𝗡𝗲𝘅𝘁-𝗟𝗲𝘃𝗲𝗹 𝗧𝗲𝗹𝗲𝗴𝗿𝗮𝗺 𝗕𝗼𝘁🤖](https://img.youtube.com/vi/r_KGyJApy5M/maxresdefault.jpg)](https://www.youtube.com/watch?v=r_KGyJApy5M)
+
+**▶️ Click the image above to watch a live demo on YouTube.** 
+
+This video provides a live demonstration of the bot's core features and how it interacts. See a quick walkthrough of its capabilities and user flow.
+
+-----
 
 ## ✨ Ignite Your Workflow: Use Cases
 
@@ -146,16 +155,6 @@ This flow leverages the **speed of vector search** in Supabase to quickly find p
 
 A glimpse into the n8n workflow automation:
 ![Workflow Screenshot](workflow-screenshot.png)
-
------
-
-## 📹 Watch the Bot in Action
-
-[![𝗨𝗻𝗹𝗲𝗮𝘀𝗵𝗶𝗻𝗴 𝗔𝗜 𝗼𝗻 𝗠𝘆 𝗕𝗼𝗼𝗸𝘀𝗵𝗲𝗹𝗳: 𝗙𝗹𝗼𝘄 𝗣𝗿𝗼𝗴𝗿𝗮𝗺𝗺𝗶𝗻𝗴 𝗣𝗼𝘄𝗲𝗿𝘀 𝗮 𝗡𝗲𝘅𝘁-𝗟𝗲𝘃𝗲𝗹 𝗧𝗲𝗹𝗲𝗴𝗿𝗮𝗺 𝗕𝗼𝘁🤖](https://img.youtube.com/vi/r_KGyJApy5M/maxresdefault.jpg)](https://www.youtube.com/watch?v=r_KGyJApy5M)
-
-**▶️ Click the image above to watch a live demo on YouTube.** 
-
-This video provides a live demonstration of the bot's core features and how it interacts. See a quick walkthrough of its capabilities and user flow.
 
 -----
 
